@@ -94,3 +94,81 @@ const doMath=(x,y) =>{
 }
 let result6=doMath(7,4);
 console.log(result6);
+
+//Spread operator, concatenate multiple arrays, array max
+const array1=[3,5,4,3,1,6,5];
+const array2=[8,5,9,2,4,5,6];
+const array3=[2,5,9,7,5,6,9,7];
+const addALLArray=[...array1,...array2,...array3];
+console.log(addALLArray);
+
+const ArrayMax=[100,200,300];
+const result9=Math.max(...ArrayMax);
+console.log('array max= ',result9);
+
+//Class, constructor, create object from class
+class student{
+constructor(sId ,sName){
+    this.id=sId;
+    this.name=sName;
+    this.university="metro";
+}
+}
+
+const student1=new student('033','jannath');
+const student2=new student('042','gazi');
+console.log(student1," ",student2.name,);
+
+// functional js 
+//Note->map(array return ,main array thik tahkey),filter function(all s wala array name dibe),reduce(1ta value ans dey,like sob jug kori ekta ans dibo)-return array but main array change hoy na 
+
+
+//Note->oop main 3 pincipals -Encapsulation, inheritance,polymorphism
+//Inheritance, extends class, super, class method
+class parent{
+    constructor(FatherName,id){
+        this.FatherName="Mr.anis";
+        this.id=33;
+    }
+
+
+}
+class child extends parent{
+    constructor(ChildName,i){
+        super(); //call parent class constructor
+        this.ChildName=ChildName;
+        this.i=i;
+    }
+    
+ addParentChild(){
+
+   return this.ChildName+ " "+this.FatherName;
+
+ }
+}
+const child1=new child('fahi',1);
+// console.log(child1);
+console.log(child1.addParentChild());
+
+
+//disstructuring
+//*kuno ekta bishal array theke kuno ekta element ke kuno variable e rakar shortcut upay
+
+const person={
+    name1:'fahi',
+    roll1:33,
+    address:'sylhet',
+    contact:010232
+}
+
+const { name1, roll1 } = person;
+
+console.log(name1,roll1);
+
+
+//array disstructuring
+const arrayFriends=['mita','tina','rita','mita','any','mitu'];
+
+const [ firstPosition,secondP,...restpositions]=arrayFriends;//array they []  variable declare e
+console.log(firstPosition);
+console.log(restpositions);
