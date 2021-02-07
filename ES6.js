@@ -166,9 +166,22 @@ const { name1, roll1 } = person;
 console.log(name1,roll1);
 
 
-//array disstructuring
+//array Destructure
 const arrayFriends=['mita','tina','rita','mita','any','mitu'];
 
 const [ firstPosition,secondP,...restpositions]=arrayFriends;//array they []  variable declare e
 console.log(firstPosition);
 console.log(restpositions);
+
+
+//complex obj Destructure
+const Complexobject={
+    name7:'fahi',
+    roll9:33,
+    info:{
+        name0:'jannath',
+        roll0:01
+    }
+}
+const {name0}=Complexobject.info;
+console.log(name0);
