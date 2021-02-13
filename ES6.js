@@ -18,7 +18,7 @@ fruits.name='orange';
 console.log(fruits);// (but cant change whole fruits value)
 
 //let
-let patient="Mina"; //u can change value of let variable 
+let patient="Mina"; //u can change value of let variable //assign kora jay //re declare kora jayna 
 patient="Raju";
 console.log(patient);
 //let is called scope variable,it only works inside the scope ,like declare in curly basis ,only work in that place!
