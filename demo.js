@@ -123,8 +123,77 @@ const Object1=
 }
 console.log(Object1['body1']());
 
+console.log('-----------------for of-------------------------')
+//for is used for array ,string itteration perpose
+const std=["s1","s2", "s3"];
+for(let name of std){
+    console.log(`name`);
+}
 
 
+
+
+console.log('-----------------for in-------------------------')
+//only for object iterate,key value
+const student1Object={
+
+    id:33,
+    nameOfStd:"Jannath",
+    section:"A"
+
+}
+
+for(let key in student1Object){
+    console.log(`${key}:${student1Object[key]}`);
+}
+
+
+
+console.log('-----------------forEach-------------------------')
+
+const num=[12,34,1,2,7,];
+num.forEach(function(x){
+ console.log(x);
+})
+
+
+
+
+
+console.log('-----------------forEach another example-------------------------')
+
+const num4=[12,34,1,2,7,];
+const squreNumber=[];
+num4.forEach(function(x){
+squreNumber.push(x*x);
+
+})
+ console.log(squreNumber);
+
+
+
+console.log('-----------------arrow with map,filter-------------------------')
+
+const StrudentArray=[
+        {
+            id:33,
+            name:"fahi",
+            section:"A"
+        },
+
+        {
+            id:42,
+            name:"sakib",
+            section:"B"
+        },
+        {
+            id:10,
+            name:"Mr.anis",
+            section:"C"
+        }
+];
+
+console.log(StrudentArray);
 
 
 
