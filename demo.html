@@ -1,4 +1,13 @@
-console.log('---normal, traditional function---------------------------------')
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6</title>
+</head>
+<body>
+<h1>ES6 Features<h1>
+
+ <script>
+     console.log('---normal, traditional function---------------------------------')
 function myName(){ 
     let name = "Jannath";
     console.log(name);
@@ -178,27 +187,42 @@ const StrudentArray=[
         {
             id:33,
             name:"fahi",
-            section:"A"
+            section:"A",
+            cgpa:3
         },
 
         {
             id:42,
-            name:"sakib",
-            section:"B"
+            name:"nou",
+            section:"B",
+            cgpa:7
         },
         {
             id:10,
-            name:"Mr.anis",
-            section:"C"
+            name:"tus",
+            section:"C",
+            cgpa:5
+        },
+        {
+            id:10,
+            name:"tus",
+            section:"C",
+            cgpa:6
         }
 ];
 
-console.log(StrudentArray);
+console.log(studentId());
+
+
+function studentId(){
+  return  StrudentArray.filter(x=>x.cgpa>5).map(x=>x.name);
+}
 
 
 
 
 
 
-
-
+ </script>   
+</body>
+</html>
