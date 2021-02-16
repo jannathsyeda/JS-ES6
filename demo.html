@@ -79,8 +79,7 @@ console.log(typeof(gender));
 
 
 console.log('--hoisting---------------------------------------------')
-// anisul islam tutorial 46,47,49,50, 54,55,56,59-63 
-//(https://www.youtube.com/watch?v=fBhxs9OHxtY&list=PLgH5QX0i9K3qzryglMjcyEktz4q7ySunX)
+
 //*hoisting (js er default behaviour ,variable assign agey kore pore var key word di a declare korley kaj kore,var declare na korley o kaj kore.but let and const eivahbe kaj kore na,js er default behaviour er jonno nicheyr var takey auto upore ni a jay,ekei hoisting boley)
 name1='fahi';
 console.log(name1);
@@ -219,10 +218,115 @@ function studentId(){
 }
 
 
+console.log('-----------------array destructure-------------------------')
+const numbers=[12,34,23,32,5,4,56,65];
+const[ n1,n2,n3,n4,n5,n6,n7,n8]=numbers;
+console.log(n1)
+console.log(n2)
+console.log(n3)
+console.log(n4)
+console.log(n5)
 
+console.log('-----------------swap  variable-------------------------')
+let a=3, b=4;
+[a,b]=[b,a];
+console.log(a);
+console.log(b)
+
+
+console.log('-----------------object destructure-------------------------')
+const std6={
+    id:33,
+    name:"Fahima"
+}
+const {id,name}=std6;
+console.log(name)
+
+console.log('-----------------nested object destructure-------------------------')
+
+const NestedObject={
+         id6:33,
+         name8:"Fahima",
+
+         std_info:{
+            name6:"sdt1",
+            section9:"A"
+         }
+}
+
+const {std_info ,id6,name6}=NestedObject;
+
+console.log(std_info.name6)
+
+
+console.log('-----------------object destructuring function-------------------------')
+
+const std_destructure_info=({id4, name88})=>{
+    console.log(`${id4},${name88}`)
+}
+
+
+
+
+std_destructure={
+
+        id4:33,
+        name88:"fahi"
+}
+
+std_destructure_info(std_destructure);
+
+
+
+
+console.log('-----------------array methods | find() | findIndex()------------------------')
+
+ //condition dara kaj kore 1st j  element condition dara match kore takey return kore
+let shonka=[2,8,5,7,4,9]
+let resultModulas=shonka.find(z=>z%2==0)
+console.log(resultModulas);
+
+
+console.log('-----------------array methods | find() | findIndex()-----------another example-------------')
+
+//59-63
+
+let shonkas=[2,8,5,7,4,9]
+
+const evenArrow=(value,index,array)=>
+{
+    if(value%2===0)
+        return value;
+}
+
+let resulteven=shonkas.find(z=>z%2==0)
+let resultevenIndex=shonkas.findIndex(z=>z%2==0)
+
+console.log(resulteven);
+console.log(resultevenIndex);
+
+console.log('-----------------array methods | find() | findIndex()-----------another example2 with object-------------')
+
+
+
+const STD=[{
+    id01:33,
+    name88:"jannath"
+},
+{
+    id01:42,
+    name88:"fahi"
+}]
+
+const main=STD.find(x=>x.id01>33);
+const mainIndex=STD.findIndex(x=>x.id01>33)
+console.log(main)
+console.log(mainIndex)
 
 
 
  </script>   
+
+
 </body>
 </html>
