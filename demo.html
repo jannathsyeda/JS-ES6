@@ -323,7 +323,50 @@ const mainIndex=STD.findIndex(x=>x.id01>33)
 console.log(main)
 console.log(mainIndex)
 
+console.log('-----------------synchronous aysynchronous-------------')
+//js is by default synchronous(after complete one task then move anpother.That's why is it called single threated programming  ,here we find a blocking  behaviour
 
+const task1=()=>{
+    console.log("task1");
+}
+
+const dataLoading=()=>{
+    console.log("task2.dataloading")
+}
+
+const task2=()=>{
+   setTimeout(dataLoading, 200)
+}
+
+const task3=()=>{
+    console.log("task3");
+}
+const task4=()=>{
+    console.log("task4");
+}
+
+task1()
+task2()
+task3()
+task4()
+
+console.log('-----------------callback function higher order function-------------')
+
+
+//j function ke argument hishabe receive korbe   takey boley call back function and j function call back ke argument hishabe nibe takey boley higher order function
+
+
+const squre= x=>
+{
+    console.log(`squre of ${x}= ${x*x}`);
+}
+
+const higerOrderFunction=(num,callBack)=>
+{
+    callBack(num)
+}
+
+ higerOrderFunction(5,squre);
 
  </script>   
 
