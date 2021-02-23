@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>async await</h1>
+
+   
+   
+   
+   
+<script>
+    //it works like synchronusly ,on asynchronus
+    const task1=()=>{
+        return new Promise((res ,reject)=>{
+            res("tas1 is complete");
+        })
+    }
+    
+    const task2=()=>{
+        return new Promise((res, reject)=>{
+            setTimeout(()=>{
+                res("task2 is complete");},2000);
+        })
+    
+    }
+    const task3=()=>{
+        return new Promise((res,reject)=>{
+            res("task3 is complete");
+        })
+    }
+    
+    async function callAllTasks(){
+        const t1 = await task1();
+        console.log(t1);
+        const t2= await task2();
+        console.log(t2);
+    }
+
+    callAllTasks();
+
+</script>
+</body>
+</html>

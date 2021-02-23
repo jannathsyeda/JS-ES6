@@ -326,29 +326,29 @@ console.log(mainIndex)
 console.log('-----------------synchronous aysynchronous-------------')
 //js is by default synchronous(after complete one task then move anpother.That's why is it called single threated programming  ,here we find a blocking  behaviour
 
-const task1=()=>{
-    console.log("task1");
-}
+// const task1=()=>{
+//     console.log("task1");
+// }
 
-const dataLoading=()=>{
-    console.log("task2.dataloading")
-}
+// const dataLoading=()=>{
+//     console.log("task2.dataloading")
+// }
 
-const task2=()=>{
-   setTimeout(dataLoading, 200)
-}
+// const task2=()=>{
+//    setTimeout(dataLoading, 200)
+// }
 
-const task3=()=>{
-    console.log("task3");
-}
-const task4=()=>{
-    console.log("task4");
-}
+// const task3=()=>{
+//     console.log("task3");
+// }
+// const task4=()=>{
+//     console.log("task4");
+// }
 
-task1()
-task2()
-task3()
-task4()
+// task1()
+// task2()
+// task3()
+// task4()
 
 console.log('-----------------callback function higher order function-------------')
 
@@ -368,8 +368,71 @@ const higerOrderFunction=(num,callBack)=>
 
  higerOrderFunction(5,squre);
 
+ //another callback exp
+//  const task11=(callback)=>{
+//     console.log("task11");
+//     callback();
+// }
+
+// const dataLoading1=()=>{
+//     console.log("task12.dataloading")
+// }
+
+// const task12=(callback)=>{
+//     setTimeout(()=>{
+//         console.log("task12.data loading");
+//         callback();
+//     }, 3000);
+ 
+// }
+
+// const task13=(callback)=>{
+//     console.log("task13");
+//     callback();
+// }
+// const task14=(callback)=>{
+//     console.log("task14");
+//     callback();
+// }
+// const task15=()=>{
+//     console.log("task15");
+   
+// }
+
+//  task11(()=>{
+//      task12(()=>{
+//          task13(()=>{
+//              task14(()=>{
+//                  task15()
+//              })
+//          })
+//      })
+//  })
+
+//promise 
+// promise has 3 state- pending ,resolve ,reject
+//catch is called when error occoured
+//then is called when the resolve is occured
+//finally is called when reject er moddey promise ta dora na pore.kintu must ekta part kaj korbe ,
+const promise = new Promise((resolve, reject)=>{
+    let completedPromise = true;
+    if(completedPromise){
+        resolve("completed promise 1");
+    }else{
+        reject("not completed promise 1");//reject(new Error("not completed"))
+    }
+});
+// console.log(promise);
+promise.then((res)=>{
+    console.log(res);
+})
+promise.catch((error)=>{
+    console.log(error);//if completePromise= false hoy then ei line kaj korbe
+    // console.log(error.message);
+})
+
  </script>   
 
 
 </body>
-</html>
+</html> 
